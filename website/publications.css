@@ -1,0 +1,395 @@
+/* Publications Page Styles */
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #ffffff;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #87CEEB;
+    padding: 5px 10px; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Merriweather', serif;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1rem;
+    margin-right: 15px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: purple !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: purple !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: purple;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+/* Page Title */
+.publications-title {
+    font-family: "Nunito", sans-serif;
+    color: #222;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #87CEEB, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-family: "Nunito", sans-serif;
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: "Nunito", sans-serif;
+    color: #222;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #87CEEB;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: purple;
+}
+
+/* Publication Cards */
+.publication-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #87CEEB;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.publication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.publication-title {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+    flex: 1;
+}
+
+.publication-title i {
+    color: #87CEEB;
+    margin-right: 10px;
+}
+
+.publication-year {
+    background: linear-gradient(45deg, #87CEEB, purple);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.publication-authors {
+    font-family: "Nunito", sans-serif;
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.publication-venue {
+    font-family: "Nunito", sans-serif;
+    color: #87CEEB;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.publication-venue i {
+    margin-right: 8px;
+}
+
+.publication-abstract {
+    font-family: "Nunito", sans-serif;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 3px solid #87CEEB;
+}
+
+.publication-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.publication-links .btn {
+    border-radius: 20px;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.publication-links .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #87CEEB;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.project-icon {
+    font-size: 3rem;
+    color: #87CEEB;
+    margin-bottom: 20px;
+}
+
+.project-card h4 {
+    font-family: "Nunito", sans-serif;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-family: "Nunito", sans-serif;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    margin-bottom: 15px;
+}
+
+.project-tech .badge {
+    margin: 0 5px 5px 0;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 15px;
+}
+
+.project-status {
+    margin-top: 15px;
+}
+
+.project-status .badge {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+/* Research Grid */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.research-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #87CEEB;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.research-icon {
+    font-size: 3rem;
+    color: #87CEEB;
+    margin-bottom: 20px;
+}
+
+.research-card h4 {
+    font-family: "Nunito", sans-serif;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.research-card p {
+    font-family: "Nunito", sans-serif;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.research-status {
+    margin-top: 15px;
+}
+
+.research-status .badge {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+/* Fade in animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* GitHub Button */
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #333;
+    padding: 10px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    width: 70px;
+    height: 70px;
+}
+
+.github-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    color: white;
+    text-decoration: none;
+}
+
+.github-button i {
+    font-size: 2.5rem;
+}
+
+/* Make project cards visible by default */
+.projects-grid .fade-in {
+    opacity: 1 !important;
+}
+
+/* Ensure project cards are visible even without the visible class */
+.project-card {
+    opacity: 1 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .publications-title {
+        font-size: 2rem;
+    }
+    
+    .publication-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .publication-links {
+        justify-content: center;
+    }
+    
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar {
+        padding: 3px 8px;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-toggler {
+        border: none;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+} 

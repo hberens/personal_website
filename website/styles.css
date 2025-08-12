@@ -1,0 +1,219 @@
+/* Global Styles */
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #ffffff;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* Headings - tag selectors*/
+h1, h2, h3 {
+    font-family: "Nunito", sans-serif;
+    color: #222;
+    margin-bottom: 12px;
+}
+p { 
+    font-family: "Nunito", sans-serif;
+}
+
+/* education section - id selector*/ 
+#education {
+    font-family: "Nunito", sans-serif;
+    cursor: pointer; 
+    display: inline-block;
+    padding: 10px 20px;      /* adjusts size of bubble */
+    background-color: #87CEEB;
+    font-size: 25px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Navigation bar - class selectors*/
+.navbar {
+    background-color: #87CEEB;
+    padding: 5px 10px; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Merriweather', serif;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1rem;
+    margin-right: 15px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: purple !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: purple;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+    color: purple !important;
+}
+
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+/* Profile Section */
+.profile {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile-img {
+    border-radius: 10px;
+    width: 250px;
+    height: 300px; 
+    border: 4px solid #ccc;
+    border-radius: 50%; 
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Info */
+.contact-info {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-info a {
+    color: #87CEEB;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #667eea;
+}
+
+.contact-info i {
+    color: #87CEEB;
+}
+
+/* Bio Card */
+.bio-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #87CEEB;
+}
+
+.bio-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Education List */
+.education-list {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.education-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+    border-left: 4px solid #87CEEB;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.education-degree {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Lead paragraph styling */
+.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #6c757d;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Fade in as you scroll animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* Responsive Design for navigation bar */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 3px 8px;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-toggler {
+        border: none;
+    }
+    
+    .contact-info {
+        margin: 0 1rem;
+    }
+    
+    .bio-card {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+    
+    .education-list {
+        margin: 0 1rem;
+    }
+}
